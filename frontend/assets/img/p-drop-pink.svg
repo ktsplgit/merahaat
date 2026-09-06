@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600" role="img" aria-label="Pink Drop Earrings">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#be185d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#g)"/>
+  <rect width="600" height="600" fill="url(#glow)"/>
+  <g opacity="0.10" stroke="#ffffff" stroke-width="2" fill="none">
+    <circle cx="510.0" cy="108.0" r="70"/>
+    <circle cx="72.0" cy="480.0" r="52"/>
+    <circle cx="510.0" cy="108.0" r="40"/>
+  </g>
+  <g fill="none" stroke="#f4d9e6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M 180.0 192.0 Q 300.0 342.0 420.0 192.0"/><circle cx="180.0" cy="192.0 " r="7"/><circle cx="210.0" cy="249.40251485476347 " r="7"/><circle cx="240.0" cy="298.06601717798213 " r="7"/><circle cx="270.0" cy="330.58192987669304 " r="7"/><circle cx="300.0" cy="342.0 " r="7"/><circle cx="330.0" cy="330.58192987669304 " r="7"/><circle cx="360.0" cy="298.06601717798213 " r="7"/><circle cx="390.0" cy="249.40251485476347 " r="7"/><circle cx="420.0" cy="192.00000000000003 " r="7"/><circle cx="300.0" cy="348.0" r="16"/></g>
+  <rect x="0" y="480" width="600" height="120" fill="rgba(0,0,0,0.28)"/>
+  <text x="300.0" y="530" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30.0" font-weight="600" fill="#ffffff">Pink Drop Earrings</text>
+  
+</svg>

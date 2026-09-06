@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-label="SURMEE Leather Store - Visit Now">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8a6a4a"/><stop offset="1" stop-color="#3d2a1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="520" fill="url(#g)"/>
+  <g opacity="0.16" fill="none" stroke="#f4e2cc" stroke-width="5">
+    <rect x="60" y="60" width="150" height="150" rx="16"/><rect x="250" y="60" width="150" height="150" rx="16"/><rect x="440" y="60" width="150" height="150" rx="16"/><rect x="630" y="60" width="150" height="150" rx="16"/><rect x="820" y="60" width="150" height="150" rx="16"/><rect x="1010" y="60" width="150" height="150" rx="16"/><rect x="60" y="260" width="150" height="150" rx="16"/><rect x="250" y="260" width="150" height="150" rx="16"/><rect x="440" y="260" width="150" height="150" rx="16"/><rect x="630" y="260" width="150" height="150" rx="16"/><rect x="820" y="260" width="150" height="150" rx="16"/><rect x="1010" y="260" width="150" height="150" rx="16"/>
+  </g>
+  <rect x="360" y="150" width="480" height="220" rx="10" fill="rgba(255,255,255,0.72)"/>
+  <text x="600" y="250" text-anchor="middle" font-family="Georgia, serif" font-weight="800" font-size="70" fill="#2b1a0e" letter-spacing="4">SURMEE</text>
+  <text x="600" y="300" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#3d2a1a" letter-spacing="6">LEATHER STORE</text>
+</svg>

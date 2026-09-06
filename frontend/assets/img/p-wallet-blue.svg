@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600" role="img" aria-label="Dark Blue Wallet">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c5230"/>
+      <stop offset="1" stop-color="#3d2414"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#g)"/>
+  <rect width="600" height="600" fill="url(#glow)"/>
+  <g opacity="0.10" stroke="#ffffff" stroke-width="2" fill="none">
+    <circle cx="510.0" cy="108.0" r="70"/>
+    <circle cx="72.0" cy="480.0" r="52"/>
+    <circle cx="510.0" cy="108.0" r="40"/>
+  </g>
+  <g fill="none" stroke="#e6c9a8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><rect x="170.0" y="172.0" width="260.0" height="160.0" rx="18"/><path d="M 170.0 222.0 H 430.0"/><rect x="360.0 " y="242.0" width="46.0" height="40.0" rx="8"/></g>
+  <rect x="0" y="480" width="600" height="120" fill="rgba(0,0,0,0.28)"/>
+  <text x="300.0" y="530" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30.0" font-weight="600" fill="#ffffff">Dark Blue Wallet</text>
+  
+</svg>

@@ -1,0 +1,204 @@
+/* =============================================================
+   MERAHAAT — products.css
+   The product listing page: filter rail + toolbar + dynamic grid.
+   Loaded after styles.css and shop.css. Tokens only — no new palette.
+
+   1. Two-column catalog layout
+   2. Filter rail
+   3. Filter controls (search, radio lists, chips)
+   4. Toolbar (count + sort + mobile Filters button)
+   5. Grid + load-more
+   6. Mobile filter drawer
+   7. Responsive
+   8. Reduced motion
+   ============================================================= */
+
+/* ============ 1. LAYOUT ============ */
+.catalog {
+  display: grid;
+  grid-template-columns: 264px minmax(0, 1fr);
+  gap: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+  align-items: start;
+}
+
+/* ============ 2. FILTER RAIL ============ */
+.filters {
+  position: sticky; top: 118px;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--r-lg);
+  padding: var(--sp-5); box-shadow: var(--sh-1);
+  max-height: calc(100vh - 140px); overflow-y: auto;
+}
+.filters__head {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  margin-bottom: var(--sp-4);
+}
+.filters__title { font-family: var(--font-display); font-size: var(--fs-md); }
+.filters__close { display: none; }
+
+.fgroup { border-top: 1px solid var(--line); padding-top: var(--sp-4); margin-top: var(--sp-4); }
+.fgroup:first-of-type { border-top: 0; padding-top: 0; margin-top: 0; }
+.fgroup__legend {
+  font-size: var(--fs-xs); font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 12px; padding: 0;
+}
+
+/* ============ 3. FILTER CONTROLS ============ */
+/* In-rail search box */
+.fsearch { position: relative; }
+.fsearch__input {
+  width: 100%; padding: 11px 38px 11px 14px;
+  border: 1px solid var(--line); border-radius: var(--r-pill); background: #fff;
+  color: var(--ink); font-size: var(--fs-sm); outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.fsearch__input:focus { border-color: var(--primary); box-shadow: 0 0 0 4px var(--primary-050); }
+.fsearch__clear {
+  position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+  width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center;
+  color: var(--muted); transition: background 0.2s, color 0.2s;
+}
+.fsearch__clear:hover { background: var(--primary-050); color: var(--primary); }
+.fsearch__clear[hidden] { display: none; }
+
+/* Radio lists (category / price / rating) */
+.flist { display: flex; flex-direction: column; gap: 2px; }
+.fopt {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 10px; border-radius: var(--r-sm); cursor: pointer;
+  font-size: var(--fs-sm); color: var(--ink-soft);
+  transition: background 0.2s, color 0.2s;
+}
+.fopt:hover { background: var(--primary-050); color: var(--ink); }
+.fopt input { position: absolute; opacity: 0; width: 0; height: 0; }
+.fopt__dot {
+  flex: 0 0 auto; width: 17px; height: 17px; border-radius: 50%;
+  border: 2px solid #cfc6ca; position: relative;
+  transition: border-color 0.2s, background 0.2s;
+}
+.fopt__dot::after {
+  content: ""; position: absolute; inset: 3px; border-radius: 50%;
+  background: #fff; transform: scale(0); transition: transform 0.22s var(--ease);
+}
+.fopt input:checked ~ .fopt__dot { border-color: var(--primary); background: var(--primary); }
+.fopt input:checked ~ .fopt__dot::after { transform: scale(1); }
+.fopt input:checked ~ .fopt__label { color: var(--primary); font-weight: 700; }
+.fopt input:focus-visible ~ .fopt__dot { outline: 3px solid var(--primary); outline-offset: 2px; }
+.fopt__label { flex: 1; min-width: 0; }
+.fopt__count { color: var(--muted); font-size: var(--fs-xs); font-weight: 700; }
+.fopt__stars { color: var(--gold); letter-spacing: 1px; }
+
+.filters__reset { width: 100%; margin-top: var(--sp-5); font-size: var(--fs-sm); padding: 0.7em 1.2em; }
+
+/* ============ 4. TOOLBAR ============ */
+.toolbar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--sp-4); flex-wrap: wrap; margin-bottom: var(--sp-5);
+}
+.toolbar__left { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.toolbar__count { font-size: var(--fs-sm); color: var(--muted); }
+.toolbar__count strong { color: var(--ink); }
+.toolbar__right { display: flex; align-items: center; gap: 10px; }
+
+.sortwrap { position: relative; display: inline-flex; align-items: center; }
+.sortwrap__label { font-size: var(--fs-sm); color: var(--muted); margin-right: 8px; }
+.sortsel {
+  appearance: none; -webkit-appearance: none;
+  padding: 10px 38px 10px 14px; border: 1px solid var(--line); border-radius: var(--r-pill);
+  background: #fff; color: var(--ink); font: inherit; font-size: var(--fs-sm); font-weight: 600;
+  cursor: pointer; outline: none; transition: border-color 0.25s, box-shadow 0.25s;
+}
+.sortsel:focus { border-color: var(--primary); box-shadow: 0 0 0 4px var(--primary-050); }
+.sortwrap::after {
+  content: ""; position: absolute; right: 15px; top: 50%; width: 8px; height: 8px;
+  border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
+  transform: translateY(-70%) rotate(45deg); pointer-events: none;
+}
+
+/* Mobile-only "Filters" trigger */
+.filterbtn {
+  display: none; align-items: center; gap: 8px;
+  padding: 10px 16px; border: 1px solid var(--line); border-radius: var(--r-pill);
+  background: #fff; font-size: var(--fs-sm); font-weight: 700; box-shadow: var(--sh-1);
+  transition: border-color 0.25s, color 0.25s;
+}
+.filterbtn:hover { border-color: var(--primary); color: var(--primary); }
+.filterbtn svg { width: 16px; height: 16px; }
+.filterbtn__badge {
+  min-width: 20px; height: 20px; padding: 0 5px; border-radius: var(--r-pill);
+  background: var(--primary); color: #fff; font-size: var(--fs-xs); font-weight: 800;
+  display: grid; place-items: center;
+}
+
+/* Active-filter chips */
+.chips { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.chip {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 6px 8px 6px 12px; border-radius: var(--r-pill);
+  background: var(--primary-050); color: var(--primary);
+  font-size: var(--fs-xs); font-weight: 700;
+}
+.chip__x {
+  width: 18px; height: 18px; border-radius: 50%; display: grid; place-items: center;
+  background: rgba(194, 24, 91, 0.16); color: var(--primary); font-size: 12px; line-height: 1;
+  transition: background 0.2s;
+}
+.chip__x:hover { background: var(--primary); color: #fff; }
+
+/* ============ 5. GRID ============ */
+/* .prodgrid / .prodgrid--4 come straight from styles.css — same cards, same
+   hover, same reveal. Nothing about the card design is redefined here. */
+#productGrid { min-height: 120px; }
+
+.loadmore { margin-top: var(--sp-7); text-align: center; }
+.loadmore__note { display: block; color: var(--muted); font-size: var(--fs-sm); margin-bottom: 12px; }
+
+/* ============ 6. MOBILE FILTER DRAWER ============ */
+.filters__overlay {
+  position: fixed; inset: 0; z-index: 1190; background: rgba(20, 10, 15, 0.45);
+  opacity: 0; transition: opacity 0.3s var(--ease);
+}
+.filters__overlay.show { opacity: 1; }
+
+/* ============ 7. RESPONSIVE ============ */
+@media (max-width: 1080px) {
+  .catalog { grid-template-columns: 232px minmax(0, 1fr); }
+  .filters { padding: var(--sp-4); }
+}
+
+@media (max-width: 900px) {
+  .catalog { grid-template-columns: 1fr; }
+  .filterbtn { display: inline-flex; }
+
+  /* The rail becomes an off-canvas drawer, mirroring the site's nav drawer. */
+  .filters {
+    position: fixed; top: 0; left: 0; bottom: 0; z-index: 1200;
+    width: min(330px, 88vw); max-height: none; border-radius: 0;
+    border: 0; border-right: 1px solid var(--line);
+    padding: var(--sp-5); box-shadow: var(--sh-3);
+    transform: translateX(-102%); transition: transform 0.36s var(--ease);
+    overflow-y: auto;
+  }
+  .filters.is-open { transform: translateX(0); }
+  .filters__close {
+    display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%;
+    background: var(--bg-alt); color: var(--ink); font-size: 1.2rem; line-height: 1;
+  }
+  .filters__close:hover { background: var(--primary-050); color: var(--primary); }
+  .filters__title { font-size: var(--fs-lg); }
+}
+
+@media (max-width: 620px) {
+  .toolbar { gap: 12px; }
+  .toolbar__right { width: 100%; justify-content: space-between; }
+  .sortsel { flex: 1; }
+}
+
+@media (max-width: 400px) {
+  .sortwrap { width: 100%; }
+  .sortwrap__label { flex: 0 0 auto; }
+}
+
+/* ============ 8. REDUCED MOTION ============ */
+@media (prefers-reduced-motion: reduce) {
+  .filters, .filters__overlay { transition: none; }
+}

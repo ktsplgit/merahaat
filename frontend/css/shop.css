@@ -1,0 +1,123 @@
+/* =============================================================
+   MERAHAAT — shop.css
+   Chrome SHARED by the three shop pages (products / product / cart).
+   Loaded after styles.css, before the page-specific stylesheet.
+
+   Built ENTIRELY on the design tokens in styles.css — no new palette,
+   no new fonts, no overrides of existing rules.
+
+   1. Page shell
+   2. Breadcrumb
+   3. Page head (title + subline)
+   4. Quantity stepper
+   5. Empty state
+   6. Small shared bits (pills, link rows, dividers)
+   7. Reduced motion
+   ============================================================= */
+
+/* ============ 1. PAGE SHELL ============ */
+.shop {
+  padding-top: clamp(1.25rem, 0.75rem + 1.5vw, 2rem);
+  padding-bottom: clamp(2.5rem, 1.5rem + 4vw, 5rem);
+}
+
+/* ============ 2. BREADCRUMB ============
+   Same component as the account page, left-aligned for the shop pages. */
+.breadcrumb {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  font-size: var(--fs-sm); color: var(--muted); margin-bottom: 14px;
+}
+.breadcrumb a { color: var(--muted); transition: color 0.25s; }
+.breadcrumb a:hover { color: var(--primary); }
+.breadcrumb__sep { opacity: 0.6; }
+.breadcrumb [aria-current] { color: var(--ink); font-weight: 600; }
+
+/* ============ 3. PAGE HEAD ============ */
+.pagehead { margin-bottom: clamp(1.25rem, 1rem + 1.5vw, 2rem); }
+.pagehead__title {
+  font-family: var(--font-display); font-weight: 600; letter-spacing: 0.01em;
+  font-size: var(--fs-xl); line-height: 1.15;
+  /* the same pink -> gold sheen used by every section heading */
+  background: linear-gradient(100deg, var(--primary) 0%, var(--gold) 45%, var(--primary) 90%);
+  background-size: 220% auto;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+  animation: titleSheen 7s linear infinite;
+}
+.pagehead__title::after {
+  content: ""; display: block; width: 68px; height: 3px; margin-top: 10px;
+  border-radius: var(--r-pill); background: linear-gradient(90deg, var(--primary), var(--gold));
+}
+.pagehead__sub { color: var(--muted); font-size: var(--fs-sm); margin-top: 12px; }
+.pagehead__count { color: var(--ink); font-weight: 700; }
+
+/* ============ 4. QUANTITY STEPPER ============
+   Used on the product detail page and on every cart line. */
+.qty {
+  display: inline-flex; align-items: center; border: 1px solid var(--line);
+  border-radius: var(--r-pill); background: #fff; overflow: hidden;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.qty:focus-within { border-color: var(--primary); box-shadow: 0 0 0 4px var(--primary-050); }
+.qty__btn {
+  width: 40px; height: 40px; display: grid; place-items: center;
+  color: var(--ink); font-size: 1.15rem; font-weight: 700; line-height: 1;
+  transition: background 0.2s, color 0.2s;
+}
+.qty__btn:hover:not(:disabled) { background: var(--primary-050); color: var(--primary); }
+.qty__btn:disabled { opacity: 0.35; cursor: not-allowed; }
+.qty__input {
+  width: 48px; height: 40px; text-align: center; border: none; outline: none;
+  font-weight: 700; color: var(--ink); background: transparent;
+  -moz-appearance: textfield; appearance: textfield;
+}
+.qty__input::-webkit-outer-spin-button,
+.qty__input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.qty--sm .qty__btn { width: 32px; height: 32px; font-size: 1rem; }
+.qty--sm .qty__input { width: 38px; height: 32px; font-size: var(--fs-sm); }
+
+/* ============ 5. EMPTY STATE ============ */
+.empty {
+  text-align: center; padding: clamp(2.5rem, 2rem + 3vw, 4.5rem) var(--sp-5);
+  border: 1px dashed var(--line); border-radius: var(--r-lg); background: var(--bg-alt);
+}
+.empty__icon {
+  width: 76px; height: 76px; margin: 0 auto var(--sp-4);
+  display: grid; place-items: center; border-radius: 50%;
+  background: var(--primary-050); color: var(--primary);
+}
+.empty__icon svg { width: 34px; height: 34px; }
+.empty__title { font-family: var(--font-display); font-size: var(--fs-lg); color: var(--ink); }
+.empty__text { color: var(--muted); margin: 10px auto 0; max-width: 46ch; font-size: var(--fs-sm); }
+.empty__actions { margin-top: var(--sp-5); display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+/* ============ 6. SMALL SHARED BITS ============ */
+/* Neutral outline button, for "Continue shopping" style secondary actions. */
+.btn--ghost {
+  background: #fff; color: var(--ink); border: 1px solid var(--line);
+  box-shadow: var(--sh-1);
+}
+.btn--ghost:hover { border-color: var(--primary); color: var(--primary); }
+
+/* Stock pill */
+.stock { display: inline-flex; align-items: center; gap: 7px; font-size: var(--fs-sm); font-weight: 700; }
+.stock::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.stock--in { color: #1e9e5a; }
+.stock--out { color: #d63a2f; }
+
+/* Saving pill, e.g. "You save ₹160.00 (40%)" */
+.saving {
+  display: inline-block; font-size: var(--fs-xs); font-weight: 800; letter-spacing: 0.02em;
+  color: var(--primary); background: var(--primary-050);
+  padding: 5px 11px; border-radius: var(--r-pill);
+}
+
+.shop-divider { height: 1px; background: var(--line); border: 0; margin-block: clamp(2rem, 1.5rem + 2vw, 3.5rem); }
+
+/* ============ 7. REDUCED MOTION ============ */
+@media (prefers-reduced-motion: reduce) {
+  .pagehead__title {
+    background: none; color: var(--primary);
+    -webkit-text-fill-color: var(--primary); animation: none;
+  }
+}

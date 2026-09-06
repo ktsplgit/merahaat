@@ -1,0 +1,130 @@
+# =============================================================
+# Meerahaat — .gitignore
+#
+# This is a static HTML/CSS/JavaScript project. There is no build
+# step, so nothing in css/, js/, assets/ or the .html files is
+# generated — all of it is source and MUST be committed.
+#
+# Everything listed below is either a local development artefact,
+# an OS/editor file, or a place where secrets could leak.
+# =============================================================
+
+# ---------- Secrets / environment ----------
+# The application does not use environment variables. These entries
+# exist so that a local experiment (a test server, a deploy script)
+# can never be committed by accident.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets.json
+credentials.json
+config.local.json
+*.local
+
+# ---------- Dependencies / build output ----------
+# Not used today (no framework, no bundler). Kept so that adding a
+# tool later cannot accidentally commit its output.
+node_modules/
+bower_components/
+jspm_packages/
+package-lock.json.bak
+dist/
+build/
+out/
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vite/
+.temp/
+.tmp/
+
+# ---------- Test / coverage ----------
+coverage/
+.nyc_output/
+*.lcov
+playwright-report/
+test-results/
+
+# ---------- Logs ----------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---------- Python (only used to serve the folder locally) ----------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# ---------- OS-generated files ----------
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+# macOS
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+# Linux
+.directory
+.Trash-*
+*~
+
+# ---------- Editor / IDE ----------
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.iml
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+.project
+.settings/
+nbproject/
+*.swp
+*.swo
+*.bak
+*.orig
+*.rej
+
+# ---------- AI / assistant tooling ----------
+# .claude/launch.json is a local Claude Code dev-server convenience
+# only. The application never reads it, and README.md documents the
+# equivalent plain command, so the repo stays tool-independent.
+.claude/
+.cursor/
+.aider*
+.continue/
+
+# ---------- Local scratch ----------
+# Ad-hoc files that sometimes appear next to a static site while
+# working on it. None of these are part of the application.
+scratch/
+notes/
+*.local.html
+*.local.css
+*.local.js
+screenshot*.png
+screenshot*.jpg
+debug*.png
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz

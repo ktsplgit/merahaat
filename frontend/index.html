@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Merahaat — Online Shopping Site for Jewellery, Women Fashion Jewellery, Furniture, Grocery, Lifestyle, Dry Fruits, Seeds & More. Best Offers!" />
+  <meta name="theme-color" content="#C2185B" />
+  <title>Online Shopping Site for Jewellery, Fashion, Grocery, Dry Fruits &amp; More — Merahaat E-Commerce Platform</title>
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="alternate icon" href="favicon.ico" sizes="48x48" />
+  <!-- Fonts (enhancement only — system fonts are the fallback in CSS) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Skip link for keyboard users -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ TOP OFFER / COUPON BAR ============ -->
+  <div class="offerbar" role="region" aria-label="Current offers">
+    <div class="offerbar__track">
+      <span class="offerbar__item">🎉 Use Coupon Code <strong>MH0005</strong> &amp; get an additional <strong>5% OFF</strong> &nbsp;·&nbsp; <a href="#" class="offerbar__link">View All Coupons Code</a></span>
+      <span class="offerbar__item">🪔 Festive Dhanteras Sale is Live &nbsp;·&nbsp; Up to <strong>70% OFF</strong> on Jewellery &amp; Namkeen</span>
+      <span class="offerbar__item">🚚 Free Worldwide Delivery on orders above <strong>₹1499</strong></span>
+      <!-- duplicated for seamless marquee loop -->
+      <span class="offerbar__item" aria-hidden="true">🎉 Use Coupon Code <strong>MH0005</strong> &amp; get an additional <strong>5% OFF</strong> &nbsp;·&nbsp; <a href="#" class="offerbar__link">View All Coupons Code</a></span>
+      <span class="offerbar__item" aria-hidden="true">🪔 Festive Dhanteras Sale is Live &nbsp;·&nbsp; Up to <strong>70% OFF</strong> on Jewellery &amp; Namkeen</span>
+      <span class="offerbar__item" aria-hidden="true">🚚 Free Worldwide Delivery on orders above <strong>₹1499</strong></span>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Merahaat home">
+        <img class="brand__logo" src="assets/img/logo.svg" width="52" height="52" alt="" />
+        <span class="brand__word"><span class="brand__mera">MERA</span><span class="brand__haat">HAAT</span></span>
+      </a>
+
+      <form class="search" role="search" onsubmit="return false;">
+        <label class="visually-hidden" for="searchInput">Search products and categories</label>
+        <input class="search__input" id="searchInput" type="search" placeholder="Search Product &amp; Category" autocomplete="off" />
+        <button class="search__btn" type="submit" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        </button>
+      </form>
+
+      <div class="header__actions">
+        <a class="iconbtn" href="account.html" aria-label="My account — login or register">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+        </a>
+        <button class="iconbtn cart" id="cartBtn" aria-label="Shopping cart, 0 items">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6L5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg>
+          <span class="cart__badge" id="cartBadge">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ============ CATEGORY NAV ============ -->
+    <nav class="catnav" aria-label="Product categories">
+      <ul class="catnav__list container">
+        <li class="catnav__item has-menu">
+          <a href="products.html?category=jewellery">Women <svg class="caret" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+          <ul class="submenu">
+            <li><a href="products.html?category=jewellery">Fashion Jewellery</a></li><li><a href="products.html?q=necklace">Oxidized Necklaces</a></li>
+            <li><a href="products.html?q=earrings">Earrings &amp; Zhumki</a></li><li><a href="products.html?category=winter-wear">Woolen Ponchos</a></li>
+          </ul>
+        </li>
+        <li class="catnav__item has-menu">
+          <a href="products.html?category=dry-fruits">Dry Fruits &amp; Seeds <svg class="caret" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+          <ul class="submenu">
+            <li><a href="products.html?q=almond">Almonds &amp; Cashews</a></li><li><a href="products.html?q=pista">Pistachios</a></li>
+            <li><a href="products.html?q=combo">Combo Packs</a></li><li><a href="products.html?q=seeds">Seeds</a></li>
+          </ul>
+        </li>
+        <li class="catnav__item has-menu">
+          <a href="products.html?category=kids">Baby &amp; Kids <svg class="caret" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+          <ul class="submenu">
+            <li><a href="products.html?q=baby">Baby Care</a></li><li><a href="products.html?category=kids">Kids Wear</a></li><li><a href="products.html?category=kids">Toys</a></li>
+          </ul>
+        </li>
+        <li class="catnav__item has-menu">
+          <a href="products.html">Home <svg class="caret" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+          <ul class="submenu">
+            <li><a href="products.html">Furnishing</a></li><li><a href="products.html">Cushions</a></li><li><a href="products.html">Decor</a></li>
+          </ul>
+        </li>
+        <li class="catnav__item"><a href="products.html?q=combo">Combo Pack</a></li>
+        <li class="catnav__item"><a href="products.html?category=corporate-gifts">Gift</a></li>
+        <li class="catnav__item has-menu">
+          <a href="products.html?category=puja">Puja <svg class="caret" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+          <ul class="submenu">
+            <li><a href="products.html?category=puja">Diyas &amp; Lamps</a></li><li><a href="products.html?q=incense">Incense</a></li><li><a href="products.html?q=thali">Puja Thali</a></li>
+          </ul>
+        </li>
+        <li class="catnav__item has-menu">
+          <a href="products.html?category=leather">Leather <svg class="caret" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+          <ul class="submenu">
+            <li><a href="products.html?q=wallet">Wallets</a></li><li><a href="products.html?q=bag">Satchels &amp; Bags</a></li><li><a href="products.html?category=leather">Belts</a></li>
+          </ul>
+        </li>
+        <li class="catnav__item"><a href="products.html?category=namkeen-snacks">Namkeen &amp; Snacks</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ============ MOBILE DRAWER ============ -->
+  <div class="drawer-overlay" id="drawerOverlay" hidden></div>
+  <aside class="drawer" id="mobileDrawer" aria-label="Mobile menu" aria-hidden="true">
+    <div class="drawer__head">
+      <span class="brand__word"><span class="brand__mera">MERA</span><span class="brand__haat">HAAT</span></span>
+      <button class="drawer__close" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav aria-label="Mobile categories">
+      <ul class="drawer__list">
+        <li><a href="products.html?category=jewellery">Women</a></li>
+        <li><a href="products.html?category=dry-fruits">Dry Fruits &amp; Seeds</a></li>
+        <li><a href="products.html?category=kids">Baby &amp; Kids</a></li>
+        <li><a href="products.html">Home</a></li>
+        <li><a href="products.html?q=combo">Combo Pack</a></li>
+        <li><a href="products.html?category=corporate-gifts">Gift</a></li>
+        <li><a href="products.html?category=puja">Puja</a></li>
+        <li><a href="products.html?category=leather">Leather</a></li>
+        <li><a href="products.html?category=namkeen-snacks">Namkeen &amp; Snacks</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main id="main">
+    <!-- The visible page opens with the hero carousel, whose slide titles are h2.
+         This h1 gives the document the single top-level heading that screen
+         readers and SEO expect, without altering the visual design. -->
+    <h1 class="visually-hidden">Merahaat — online shopping for jewellery, fashion, grocery, dry fruits and gifts</h1>
+
+    <!-- ============ HERO SLIDER ============ -->
+    <section class="hero" aria-roledescription="carousel" aria-label="Featured category banners">
+      <div class="hero__viewport">
+        <div class="hero__track" id="heroTrack">
+
+          <!-- Winter Wear opens the carousel, then it auto-advances through
+               the rest. Only this first image is eager — the others are lazy. -->
+          <div class="hero__slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 5">
+            <img class="hero__img" src="assets/img/photos/hero-winter.jpg" onerror="this.onerror=null;this.src='assets/img/hero-winter.svg'" alt="Winter wear banner" />
+            <div class="hero__overlay"></div>
+            <div class="container hero__content">
+              <p class="hero__eyebrow">Stay Cosy</p>
+              <h2 class="hero__title">Winter Wear</h2>
+              <p class="hero__sub">Woolen ponchos &amp; warmers to keep the chill away in style.</p>
+              <a href="#featured" class="btn btn--primary hero__cta">Shop Now</a>
+            </div>
+          </div>
+
+          <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="2 of 5">
+            <img class="hero__img" src="assets/img/photos/hero-namkeen.jpg" onerror="this.onerror=null;this.src='assets/img/hero-namkeen.svg'" alt="Namkeen and snacks banner" loading="lazy" />
+            <div class="hero__overlay"></div>
+            <div class="container hero__content">
+              <p class="hero__eyebrow">Crisp &amp; Fresh</p>
+              <h2 class="hero__title">Namkeen &amp; Snacks</h2>
+              <p class="hero__sub">Authentic Indian flavours, freshly packed and delivered to your door.</p>
+              <a href="#featured" class="btn btn--primary hero__cta">Shop Now</a>
+            </div>
+          </div>
+
+          <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="3 of 5">
+            <img class="hero__img" src="assets/img/photos/hero-dryfruit.jpg" onerror="this.onerror=null;this.src='assets/img/hero-dryfruit.svg'" alt="Premium dry fruits banner" loading="lazy" />
+            <div class="hero__overlay"></div>
+            <div class="container hero__content">
+              <p class="hero__eyebrow">Nutrition First</p>
+              <h2 class="hero__title">Premium Dry Fruits</h2>
+              <p class="hero__sub">Hand-picked almonds, cashews &amp; pistachios in value combo packs.</p>
+              <a href="#featured" class="btn btn--primary hero__cta">Shop Now</a>
+            </div>
+          </div>
+
+          <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="4 of 5">
+            <img class="hero__img" src="assets/img/photos/hero-jewellery.jpg" onerror="this.onerror=null;this.src='assets/img/hero-jewellery.svg'" alt="Oxidized jewellery banner" loading="lazy" />
+            <div class="hero__overlay"></div>
+            <div class="container hero__content">
+              <p class="hero__eyebrow">Festive Sparkle</p>
+              <h2 class="hero__title">Oxidized Jewellery</h2>
+              <p class="hero__sub">Chokars, zhumki &amp; chandelier earrings for every celebration.</p>
+              <a href="#latest" class="btn btn--primary hero__cta">Shop Now</a>
+            </div>
+          </div>
+
+          <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="5 of 5">
+            <img class="hero__img" src="assets/img/photos/hero-leather.jpg" onerror="this.onerror=null;this.src='assets/img/hero-leather.svg'" alt="SURMEE leather banner" loading="lazy" />
+            <div class="hero__overlay"></div>
+            <div class="container hero__content">
+              <p class="hero__eyebrow">Handcrafted</p>
+              <h2 class="hero__title">SURMEE Leather</h2>
+              <p class="hero__sub">Genuine leather wallets built to last — now up to 40% off.</p>
+              <a href="#top-products" class="btn btn--primary hero__cta">Shop Now</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="hero__sparkles" id="heroSparkles" aria-hidden="true"></div>
+
+      <button class="hero__nav hero__nav--prev" id="heroPrev" aria-label="Previous slide">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <button class="hero__nav hero__nav--next" id="heroNext" aria-label="Next slide">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+      <div class="hero__dots" id="heroDots" role="tablist" aria-label="Choose slide"></div>
+    </section>
+
+    <!-- ============ SHOP BY CATEGORY ============ -->
+    <section class="section" id="shop-by-category">
+      <div class="container">
+        <h2 class="section__title reveal" data-underline>Shop by Category</h2>
+        <div class="catgrid">
+          <a class="catcard reveal" href="products.html?category=jewellery" data-stagger style="--i:0">
+            <div class="catcard__media"><img src="assets/img/photos/cat-jewellery.jpg" onerror="this.onerror=null;this.src='assets/img/cat-jewellery.svg'" alt="Jewellery" loading="lazy" /></div>
+            <span class="catcard__label">Jewellery</span>
+          </a>
+          <a class="catcard reveal" href="products.html?category=leather" data-stagger style="--i:1">
+            <div class="catcard__media"><img src="assets/img/photos/cat-leather.jpg" onerror="this.onerror=null;this.src='assets/img/cat-leather.svg'" alt="Leather" loading="lazy" /></div>
+            <span class="catcard__label">Leather</span>
+          </a>
+          <a class="catcard reveal" href="products.html?category=kids" data-stagger style="--i:2">
+            <div class="catcard__media"><img src="assets/img/photos/cat-kids.jpg" onerror="this.onerror=null;this.src='assets/img/cat-kids.svg'" alt="Kids" loading="lazy" /></div>
+            <span class="catcard__label">Kids</span>
+          </a>
+          <a class="catcard reveal" href="products.html?category=winter-wear" data-stagger style="--i:3">
+            <div class="catcard__media"><img src="assets/img/photos/cat-winter.jpg" onerror="this.onerror=null;this.src='assets/img/cat-winter.svg'" alt="Winter Wear" loading="lazy" /></div>
+            <span class="catcard__label">Winter Wear</span>
+          </a>
+          <a class="catcard reveal" href="products.html?category=grocery" data-stagger style="--i:4">
+            <div class="catcard__media"><img src="assets/img/photos/cat-grocery.jpg" onerror="this.onerror=null;this.src='assets/img/cat-grocery.svg'" alt="Grocery" loading="lazy" /></div>
+            <span class="catcard__label">Grocery</span>
+          </a>
+          <a class="catcard reveal" href="products.html?category=dry-fruits" data-stagger style="--i:5">
+            <div class="catcard__media"><img src="assets/img/photos/cat-dryfruits.jpg" onerror="this.onerror=null;this.src='assets/img/cat-dryfruits.svg'" alt="Dry Fruits" loading="lazy" /></div>
+            <span class="catcard__label">Dry Fruits</span>
+          </a>
+          <a class="catcard reveal" href="products.html?category=corporate-gifts" data-stagger style="--i:6">
+            <div class="catcard__media"><img src="assets/img/photos/cat-gifts.jpg" onerror="this.onerror=null;this.src='assets/img/cat-gifts.svg'" alt="Corporate Gifts" loading="lazy" /></div>
+            <span class="catcard__label">Corporate Gifts</span>
+          </a>
+          <a class="catcard reveal" href="products.html?category=cosmetic" data-stagger style="--i:7">
+            <div class="catcard__media"><img src="assets/img/photos/cat-cosmetic.jpg" onerror="this.onerror=null;this.src='assets/img/cat-cosmetic.svg'" alt="Cosmetic" loading="lazy" /></div>
+            <span class="catcard__label">Cosmetic</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TOP PRODUCTS ============ -->
+    <section class="section" id="top-products">
+      <div class="container">
+        <h2 class="section__title reveal" data-underline>Top Products</h2>
+        <div class="topgrid">
+          <!-- festive banner -->
+          <a class="festive reveal" href="#" aria-label="Sab Se Special — Download Catalogue">
+            <img src="assets/img/festive-banner.svg" alt="Sab Se Special festive offer. Happy Dhanteras and Bhai Dooj. Download Catalogue." loading="lazy" />
+          </a>
+
+          <!-- 6 SURMEE wallet cards -->
+          <div class="prodgrid prodgrid--3">
+            <!-- card 1 -->
+            <article class="card reveal" data-id="1" data-stagger style="--i:0">
+              <div class="card__media">
+                <span class="badge badge--pulse">-40%</span>
+                <img class="card__img" src="assets/img/photos/p-wallet-black.jpg" onerror="this.onerror=null;this.src='assets/img/p-wallet-black.svg'" alt="SURMEE Premium Black Bifold Leather Wallet for Men" loading="lazy" />
+                <a class="card__link" href="product.html?id=1" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions">
+                  <button class="card__add" type="button" data-add data-id="1">Add to cart</button>
+                  <a class="card__quick" href="product.html?id=1">View details</a>
+                </div>
+              </div>
+              <div class="card__body">
+                <div class="stars" aria-label="4.5 out of 5 stars">★★★★½ <span class="stars__count">(38 reviews)</span></div>
+                <h3 class="card__title"><a href="product.html?id=1">SURMEE Premium Black Bifold Leather Wallet for Men</a></h3>
+                <p class="card__price"><span class="price">₹240.00</span> <span class="price--old">₹400.00</span></p>
+              </div>
+            </article>
+            <!-- card 2 -->
+            <article class="card reveal" data-id="2" data-stagger style="--i:1">
+              <div class="card__media">
+                <span class="badge badge--pulse">-23%</span>
+                <img class="card__img" src="assets/img/photos/p-wallet-blue.jpg" onerror="this.onerror=null;this.src='assets/img/p-wallet-blue.svg'" alt="SURMEE Premium Bifold Leather Dark Blue Wallet for Men" loading="lazy" />
+                <a class="card__link" href="product.html?id=2" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions">
+                  <button class="card__add" type="button" data-add data-id="2">Add to cart</button>
+                  <a class="card__quick" href="product.html?id=2">View details</a>
+                </div>
+              </div>
+              <div class="card__body">
+                <div class="stars" aria-label="4.4 out of 5 stars">★★★★½ <span class="stars__count">(21 reviews)</span></div>
+                <h3 class="card__title"><a href="product.html?id=2">SURMEE Premium Bifold Leather Dark Blue Wallet for Men</a></h3>
+                <p class="card__price"><span class="price">₹499.00</span> <span class="price--old">₹650.00</span></p>
+              </div>
+            </article>
+            <!-- card 3 -->
+            <article class="card reveal" data-id="3" data-stagger style="--i:2">
+              <div class="card__media">
+                <span class="badge badge--pulse">-23%</span>
+                <img class="card__img" src="assets/img/photos/p-wallet-classic.jpg" onerror="this.onerror=null;this.src='assets/img/p-wallet-classic.svg'" alt="SURMEE Men's Classic Genuine Leather Wallet" loading="lazy" />
+                <a class="card__link" href="product.html?id=3" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions">
+                  <button class="card__add" type="button" data-add data-id="3">Add to cart</button>
+                  <a class="card__quick" href="product.html?id=3">View details</a>
+                </div>
+              </div>
+              <div class="card__body">
+                <div class="stars" aria-label="4.3 out of 5 stars">★★★★½ <span class="stars__count">(17 reviews)</span></div>
+                <h3 class="card__title"><a href="product.html?id=3">SURMEE Men's Classic Genuine Leather Wallet with Coin Pocket</a></h3>
+                <p class="card__price"><span class="price">₹499.00</span> <span class="price--old">₹650.00</span></p>
+              </div>
+            </article>
+            <!-- card 4 -->
+            <article class="card reveal" data-id="4" data-stagger style="--i:3">
+              <div class="card__media">
+                <img class="card__img" src="assets/img/photos/p-wallet-fold.jpg" onerror="this.onerror=null;this.src='assets/img/p-wallet-fold.svg'" alt="SURMEE Genuine Leather Men's Classic Fold Wallet" loading="lazy" />
+                <a class="card__link" href="product.html?id=4" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions">
+                  <button class="card__add" type="button" data-add data-id="4">Add to cart</button>
+                  <a class="card__quick" href="product.html?id=4">View details</a>
+                </div>
+              </div>
+              <div class="card__body">
+                <div class="stars" aria-label="4.6 out of 5 stars">★★★★½ <span class="stars__count">(12 reviews)</span></div>
+                <h3 class="card__title"><a href="product.html?id=4">SURMEE Genuine Leather Men's Classic Fold Wallet</a></h3>
+                <p class="card__price"><span class="price">₹650.00</span></p>
+              </div>
+            </article>
+            <!-- card 5 -->
+            <article class="card reveal" data-id="5" data-stagger style="--i:4">
+              <div class="card__media">
+                <span class="badge badge--pulse">-23%</span>
+                <img class="card__img" src="assets/img/photos/p-wallet-bifold.jpg" onerror="this.onerror=null;this.src='assets/img/p-wallet-bifold.svg'" alt="SURMEE Men's Genuine Leather Classic Bi-Fold Wallet" loading="lazy" />
+                <a class="card__link" href="product.html?id=5" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions">
+                  <button class="card__add" type="button" data-add data-id="5">Add to cart</button>
+                  <a class="card__quick" href="product.html?id=5">View details</a>
+                </div>
+              </div>
+              <div class="card__body">
+                <div class="stars" aria-label="4.2 out of 5 stars">★★★★☆ <span class="stars__count">(9 reviews)</span></div>
+                <h3 class="card__title"><a href="product.html?id=5">SURMEE Men's Genuine Leather Classic Bi-Fold Wallet</a></h3>
+                <p class="card__price"><span class="price">₹499.00</span> <span class="price--old">₹650.00</span></p>
+              </div>
+            </article>
+            <!-- card 6 -->
+            <article class="card reveal" data-id="6" data-stagger style="--i:5">
+              <div class="card__media">
+                <span class="badge badge--pulse">-23%</span>
+                <img class="card__img" src="assets/img/photos/p-wallet-dark.jpg" onerror="this.onerror=null;this.src='assets/img/p-wallet-dark.svg'" alt="SURMEE Men's Premium Genuine Leather Dark Wallet" loading="lazy" />
+                <a class="card__link" href="product.html?id=6" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions">
+                  <button class="card__add" type="button" data-add data-id="6">Add to cart</button>
+                  <a class="card__quick" href="product.html?id=6">View details</a>
+                </div>
+              </div>
+              <div class="card__body">
+                <div class="stars" aria-label="4.5 out of 5 stars">★★★★½ <span class="stars__count">(26 reviews)</span></div>
+                <h3 class="card__title"><a href="product.html?id=6">SURMEE Men's Premium Genuine Leather Dark Wallet</a></h3>
+                <p class="card__price"><span class="price">₹499.00</span> <span class="price--old">₹650.00</span></p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED LIFESTYLE MOSAIC ============ -->
+    <section class="section" id="featured">
+      <div class="container">
+        <div class="mosaic">
+          <a class="mosaic__cell reveal" href="products.html?q=bag" data-stagger style="--i:0">
+            <img src="assets/img/photos/m-sling.jpg" onerror="this.onerror=null;this.src='assets/img/m-sling.svg'" alt="Women sling bags" loading="lazy" />
+            <span class="mosaic__cap">Women Sling Bags</span>
+          </a>
+          <a class="mosaic__cell reveal" href="products.html?category=dry-fruits" data-stagger style="--i:1">
+            <img src="assets/img/photos/m-basket.jpg" onerror="this.onerror=null;this.src='assets/img/m-basket.svg'" alt="Dry fruit hampers" loading="lazy" />
+            <span class="mosaic__cap">Dry Fruit Hampers</span>
+          </a>
+          <a class="mosaic__cell reveal" href="products.html?category=jewellery" data-stagger style="--i:2">
+            <img src="assets/img/photos/m-goldearrings.jpg" onerror="this.onerror=null;this.src='assets/img/m-goldearrings.svg'" alt="Fine jewellery" loading="lazy" />
+            <span class="mosaic__cap">Fine Jewellery</span>
+          </a>
+          <a class="mosaic__cell reveal" href="products.html?category=leather" data-stagger style="--i:3">
+            <img src="assets/img/photos/m-satchel.jpg" onerror="this.onerror=null;this.src='assets/img/m-satchel.svg'" alt="Leather satchels" loading="lazy" />
+            <span class="mosaic__cap">Leather Satchels</span>
+          </a>
+          <a class="mosaic__cell reveal" href="products.html?category=dry-fruits" data-stagger style="--i:4">
+            <img src="assets/img/photos/m-trailmix.jpg" onerror="this.onerror=null;this.src='assets/img/m-trailmix.svg'" alt="Trail mix" loading="lazy" />
+            <span class="mosaic__cap">Trail Mix</span>
+          </a>
+          <a class="mosaic__cell reveal" href="products.html?category=kids" data-stagger style="--i:5">
+            <img src="assets/img/photos/m-baby.jpg" onerror="this.onerror=null;this.src='assets/img/m-baby.svg'" alt="Baby and kids care" loading="lazy" />
+            <span class="mosaic__cap">Baby &amp; Kids Care</span>
+          </a>
+        </div>
+
+        <h2 class="section__title reveal" data-underline>Featured Products</h2>
+
+        <!-- Discounted product grid (10 products) -->
+        <div class="prodgrid prodgrid--5">
+          <article class="card reveal" data-id="7" data-stagger style="--i:0">
+            <div class="card__media">
+              <span class="badge badge--pulse">-35%</span>
+              <img class="card__img" src="assets/img/photos/p-almonds.jpg" onerror="this.onerror=null;this.src='assets/img/p-almonds.svg'" alt="Roasted Salted Almonds Badam 250gms" loading="lazy" />
+              <a class="card__link" href="product.html?id=7" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions"><button class="card__add" type="button" data-add data-id="7">Add to cart</button><a class="card__quick" href="product.html?id=7">View details</a></div>
+            </div>
+            <div class="card__body">
+              <div class="stars" aria-label="4.6 out of 5 stars">★★★★½ <span class="stars__count">(54 reviews)</span></div>
+              <h3 class="card__title"><a href="product.html?id=7">Roasted Salted Almonds Badam — 250gms</a></h3>
+              <p class="card__price"><span class="price">₹282.00</span> <span class="price--old">₹434.00</span></p>
+            </div>
+          </article>
+
+          <article class="card reveal" data-id="8" data-stagger style="--i:1">
+            <div class="card__media">
+              <span class="badge badge--pulse">-70%</span>
+              <img class="card__img" src="assets/img/photos/p-poncho.jpg" onerror="this.onerror=null;this.src='assets/img/p-poncho.svg'" alt="Woolen Ponchos For Girls And Women" loading="lazy" />
+              <a class="card__link" href="product.html?id=8" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions"><button class="card__add" type="button" data-add data-id="8">Add to cart</button><a class="card__quick" href="product.html?id=8">View details</a></div>
+            </div>
+            <div class="card__body">
+              <div class="stars" aria-label="4.3 out of 5 stars">★★★★½ <span class="stars__count">(31 reviews)</span></div>
+              <h3 class="card__title"><a href="product.html?id=8">Woolen Ponchos For Girls And Women</a></h3>
+              <p class="card__price"><span class="price">₹1,300.00</span> <span class="price--old">₹4,333.33</span></p>
+            </div>
+          </article>
+
+          <article class="card reveal" data-id="9" data-stagger style="--i:2">
+            <div class="card__media">
+              <span class="badge badge--pulse">-70%</span>
+              <img class="card__img" src="assets/img/photos/p-earrings-black.jpg" onerror="this.onerror=null;this.src='assets/img/p-earrings-black.svg'" alt="Ethereal Glow Silver Oxidized Black Color Dangler Earrings" loading="lazy" />
+              <a class="card__link" href="product.html?id=9" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions"><button class="card__add" type="button" data-add data-id="9">Add to cart</button><a class="card__quick" href="product.html?id=9">View details</a></div>
+            </div>
+            <div class="card__body">
+              <div class="stars" aria-label="4.4 out of 5 stars">★★★★½ <span class="stars__count">(47 reviews)</span></div>
+              <h3 class="card__title"><a href="product.html?id=9">Ethereal Glow Silver Oxidized Black Color Dangler Earrings</a></h3>
+              <p class="card__price"><span class="price">₹220.00</span> <span class="price--old">₹733.00</span></p>
+            </div>
+          </article>
+
+          <article class="card reveal" data-id="10" data-stagger style="--i:3">
+            <div class="card__media">
+              <span class="badge badge--pulse">-35%</span>
+              <img class="card__img" src="assets/img/photos/p-combo.jpg" onerror="this.onerror=null;this.src='assets/img/p-combo.svg'" alt="Dry Fruit Combo Pack 2.9 Kgs Pack Of 6" loading="lazy" />
+              <a class="card__link" href="product.html?id=10" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions"><button class="card__add" type="button" data-add data-id="10">Add to cart</button><a class="card__quick" href="product.html?id=10">View details</a></div>
+            </div>
+            <div class="card__body">
+              <div class="stars" aria-label="4 out of 5 stars">★★★★☆ <span class="stars__count">(1 review)</span></div>
+              <h3 class="card__title"><a href="product.html?id=10">Dry Fruit Combo Pack — 2.9 Kgs Pack Of 6 (500×5 + 400gms)</a></h3>
+              <p class="card__price"><span class="price">₹2,965.00</span> <span class="price--old">₹4,562.00</span></p>
+            </div>
+          </article>
+
+          <article class="card reveal" data-id="11" data-stagger style="--i:4">
+            <div class="card__media">
+              <span class="badge badge--pulse">-50%</span>
+              <img class="card__img" src="assets/img/photos/p-aloobhujia.jpg" onerror="this.onerror=null;this.src='assets/img/p-aloobhujia.svg'" alt="Aloo Bhujia Namkeen 400gm" loading="lazy" />
+              <a class="card__link" href="product.html?id=11" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions"><button class="card__add" type="button" data-add data-id="11">Add to cart</button><a class="card__quick" href="product.html?id=11">View details</a></div>
+            </div>
+            <div class="card__body">
+              <div class="stars" aria-label="4.5 out of 5 stars">★★★★½ <span class="stars__count">(62 reviews)</span></div>
+              <h3 class="card__title"><a href="product.html?id=11">Aloo Bhujia Namkeen (400GM)</a></h3>
+              <p class="card__price"><span class="price">₹99.00</span> <span class="price--old">₹198.00</span></p>
+            </div>
+          </article>
+
+          <article class="card reveal" data-id="12" data-stagger style="--i:5">
+            <div class="card__media">
+              <span class="badge badge--pulse">-50%</span>
+              <img class="card__img" src="assets/img/photos/p-navratan.jpg" onerror="this.onerror=null;this.src='assets/img/p-navratan.svg'" alt="Navratan Mix 200gm" loading="lazy" />
+              <a class="card__link" href="product.html?id=12" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions"><button class="card__add" type="button" data-add data-id="12">Add to cart</button><a class="card__quick" href="product.html?id=12">View details</a></div>
+            </div>
+            <div class="card__body">
+              <div class="stars" aria-label="4.2 out of 5 stars">★★★★☆ <span class="stars__count">(28 reviews)</span></div>
+              <h3 class="card__title"><a href="product.html?id=12">Navratan Mix (200GM)</a></h3>
+              <p class="card__price"><span class="price">₹50.00</span> <span class="price--old">₹100.00</span></p>
+            </div>
+          </article>
+
+          <article class="card reveal" data-id="13" data-stagger style="--i:6">
+            <div class="card__media">
+              <span class="badge badge--pulse">-70%</span>
+              <img class="card__img" src="assets/img/photos/p-necklace-green.jpg" onerror="this.onerror=null;this.src='assets/img/p-necklace-green.svg'" alt="Twilight Serenade Silver Oxidized Green Color Chokar Necklace Set" loading="lazy" />
+              <a class="card__link" href="product.html?id=13" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions"><button class="card__add" type="button" data-add data-id="13">Add to cart</button><a class="card__quick" href="product.html?id=13">View details</a></div>
+            </div>
+            <div class="card__body">
+              <div class="stars" aria-label="4.7 out of 5 stars">★★★★½ <span class="stars__count">(35 reviews)</span></div>
+              <h3 class="card__title"><a href="product.html?id=13">Twilight Serenade Silver Oxidized Green Color Chokar Necklace Set</a></h3>
+              <p class="card__price"><span class="price">₹780.00</span> <span class="price--old">₹2,600.00</span></p>
+            </div>
+          </article>
+
+          <article class="card reveal" data-id="14" data-stagger style="--i:7">
+            <div class="card__media">
+              <span class="badge badge--pulse">-35%</span>
+              <img class="card__img" src="assets/img/photos/p-cashew.jpg" onerror="this.onerror=null;this.src='assets/img/p-cashew.svg'" alt="Cashew Kernels Whole Kaju W 240 1kg" loading="lazy" />
+              <a class="card__link" href="product.html?id=14" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions"><button class="card__add" type="button" data-add data-id="14">Add to cart</button><a class="card__quick" href="product.html?id=14">View details</a></div>
+            </div>
+            <div class="card__body">
+              <div class="stars" aria-label="4 out of 5 stars">★★★★☆ <span class="stars__count">(1 review)</span></div>
+              <h3 class="card__title"><a href="product.html?id=14">Cashew Kernels Whole Kaju W 240 — 1kg</a></h3>
+              <p class="card__price"><span class="price">₹982.00</span> <span class="price--old">₹1,511.00</span></p>
+            </div>
+          </article>
+
+          <article class="card reveal" data-id="15" data-stagger style="--i:8">
+            <div class="card__media">
+              <span class="badge badge--pulse">-70%</span>
+              <img class="card__img" src="assets/img/photos/p-necklace-long.jpg" onerror="this.onerror=null;this.src='assets/img/p-necklace-long.svg'" alt="Oxidised Elegant Black color Long Necklace Set with Pearl Beads" loading="lazy" />
+              <a class="card__link" href="product.html?id=15" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions"><button class="card__add" type="button" data-add data-id="15">Add to cart</button><a class="card__quick" href="product.html?id=15">View details</a></div>
+            </div>
+            <div class="card__body">
+              <div class="stars" aria-label="4.8 out of 5 stars">★★★★★ <span class="stars__count">(19 reviews)</span></div>
+              <h3 class="card__title"><a href="product.html?id=15">Oxidised Elegant Black Color Long Necklace Set with Pearl Beads</a></h3>
+              <p class="card__price"><span class="price">₹1,980.00</span> <span class="price--old">₹6,600.00</span></p>
+            </div>
+          </article>
+
+          <article class="card reveal" data-id="16" data-stagger style="--i:9">
+            <div class="card__media">
+              <span class="badge badge--pulse">-70%</span>
+              <img class="card__img" src="assets/img/photos/p-necklace-multi.jpg" onerror="this.onerror=null;this.src='assets/img/p-necklace-multi.svg'" alt="Timeless Elegance Silver Oxidized Multi Color Chokar Necklace" loading="lazy" />
+              <a class="card__link" href="product.html?id=16" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions"><button class="card__add" type="button" data-add data-id="16">Add to cart</button><a class="card__quick" href="product.html?id=16">View details</a></div>
+            </div>
+            <div class="card__body">
+              <div class="stars" aria-label="4.5 out of 5 stars">★★★★½ <span class="stars__count">(41 reviews)</span></div>
+              <h3 class="card__title"><a href="product.html?id=16">Timeless Elegance Silver Oxidized Multi Color Chokar Necklace</a></h3>
+              <p class="card__price"><span class="price">₹720.00</span> <span class="price--old">₹2,400.00</span></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LATEST PRODUCTS ============ -->
+    <section class="section" id="latest">
+      <div class="container">
+        <!-- small lifestyle mosaic strip -->
+        <div class="mosaic mosaic--3">
+          <a class="mosaic__cell reveal" href="products.html?category=puja" data-stagger style="--i:0">
+            <img src="assets/img/m-incense.jpg" alt="Puja essentials" loading="lazy" />
+            <span class="mosaic__cap">Puja Essentials</span>
+          </a>
+          <a class="mosaic__cell reveal" href="products.html" data-stagger style="--i:1">
+            <img src="assets/img/m-cushion.svg" alt="Home furnishing" loading="lazy" />
+            <span class="mosaic__cap">Home Furnishing</span>
+          </a>
+          <a class="mosaic__cell reveal" href="products.html?category=grocery" data-stagger style="--i:2">
+            <img src="assets/img/photos/m-spices.jpg" onerror="this.onerror=null;this.src='assets/img/m-spices.svg'" alt="Grocery and spices" loading="lazy" />
+            <span class="mosaic__cap">Grocery &amp; Spices</span>
+          </a>
+        </div>
+
+        <h2 class="section__title reveal" data-underline>Latest Products</h2>
+
+        <div class="prodgrid prodgrid--4">
+          <article class="card reveal" data-id="17" data-stagger style="--i:0">
+            <div class="card__media">
+              <span class="badge badge--pulse">-65%</span>
+              <img class="card__img" src="assets/img/photos/p-zhumi.jpg" onerror="this.onerror=null;this.src='assets/img/p-zhumi.svg'" alt="Multi Color Zhumi in American Diamond" loading="lazy" />
+              <a class="card__link" href="product.html?id=17" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions"><button class="card__add" type="button" data-add data-id="17">Add to cart</button><a class="card__quick" href="product.html?id=17">View details</a></div>
+            </div>
+            <div class="card__body">
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★ <span class="stars__count">(1 review)</span></div>
+              <h3 class="card__title"><a href="product.html?id=17">Multi Color Zhumi in American Diamond</a></h3>
+              <p class="card__price"><span class="price">₹300.00</span> <span class="price--old">₹857.14</span></p>
+            </div>
+          </article>
+
+          <article class="card reveal" data-id="18" data-stagger style="--i:1">
+            <div class="card__media">
+              <span class="badge badge--pulse">-70%</span>
+              <img class="card__img" src="assets/img/photos/p-chokar-ruby.jpg" onerror="this.onerror=null;this.src='assets/img/p-chokar-ruby.svg'" alt="Oxidised Tribal look Stylish Chokar Necklace Set with Pearl Beads and Ruby" loading="lazy" />
+              <a class="card__link" href="product.html?id=18" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions"><button class="card__add" type="button" data-add data-id="18">Add to cart</button><a class="card__quick" href="product.html?id=18">View details</a></div>
+            </div>
+            <div class="card__body">
+              <div class="stars" aria-label="4.6 out of 5 stars">★★★★½ <span class="stars__count">(23 reviews)</span></div>
+              <h3 class="card__title"><a href="product.html?id=18">Oxidised Tribal look Stylish Chokar Necklace Set with Pearl Beads &amp; Ruby</a></h3>
+              <p class="card__price"><span class="price">₹920.00</span> <span class="price--old">₹3,066.00</span></p>
+            </div>
+          </article>
+
+          <article class="card reveal" data-id="19" data-stagger style="--i:2">
+            <div class="card__media">
+              <span class="badge badge--pulse">-70%</span>
+              <img class="card__img" src="assets/img/photos/p-zhumki-black.jpg" onerror="this.onerror=null;this.src='assets/img/p-zhumki-black.svg'" alt="Radiant Oxidized Silver look Black Color Zhumki Chandelier Earrings" loading="lazy" />
+              <a class="card__link" href="product.html?id=19" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions"><button class="card__add" type="button" data-add data-id="19">Add to cart</button><a class="card__quick" href="product.html?id=19">View details</a></div>
+            </div>
+            <div class="card__body">
+              <div class="stars" aria-label="4.3 out of 5 stars">★★★★½ <span class="stars__count">(16 reviews)</span></div>
+              <h3 class="card__title"><a href="product.html?id=19">Radiant Oxidized Silver look Black Color Zhumki Chandelier Earrings</a></h3>
+              <p class="card__price"><span class="price">₹212.00</span> <span class="price--old">₹706.00</span></p>
+            </div>
+          </article>
+
+          <article class="card reveal" data-id="20" data-stagger style="--i:3">
+            <div class="card__media">
+              <span class="badge badge--pulse">-70%</span>
+              <img class="card__img" src="assets/img/photos/p-chokar-green.jpg" onerror="this.onerror=null;this.src='assets/img/p-chokar-green.svg'" alt="Ethereal Aura Silver Look Oxidized Green Color Chokar Necklace Set" loading="lazy" />
+              <a class="card__link" href="product.html?id=20" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions"><button class="card__add" type="button" data-add data-id="20">Add to cart</button><a class="card__quick" href="product.html?id=20">View details</a></div>
+            </div>
+            <div class="card__body">
+              <div class="stars" aria-label="4.4 out of 5 stars">★★★★½ <span class="stars__count">(12 reviews)</span></div>
+              <h3 class="card__title"><a href="product.html?id=20">Ethereal Aura Silver Look Oxidized Green Color Chokar Necklace Set</a></h3>
+              <p class="card__price"><span class="price">₹640.00</span> <span class="price--old">₹2,133.00</span></p>
+            </div>
+          </article>
+
+          <article class="card reveal" data-id="21" data-stagger style="--i:4">
+            <div class="card__media">
+              <span class="badge badge--pulse">-70%</span>
+              <img class="card__img" src="assets/img/photos/p-cascade.jpg" onerror="this.onerror=null;this.src='assets/img/p-cascade.svg'" alt="Vintage Silver Cascade Rani and Green Color Chandelier Zhumki Earrings" loading="lazy" />
+              <a class="card__link" href="product.html?id=21" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions"><button class="card__add" type="button" data-add data-id="21">Add to cart</button><a class="card__quick" href="product.html?id=21">View details</a></div>
+            </div>
+            <div class="card__body">
+              <div class="stars" aria-label="4.5 out of 5 stars">★★★★½ <span class="stars__count">(14 reviews)</span></div>
+              <h3 class="card__title"><a href="product.html?id=21">Vintage Silver Cascade Rani &amp; Green Color Chandelier Zhumki Earrings</a></h3>
+              <p class="card__price"><span class="price">₹360.00</span> <span class="price--old">₹1,200.00</span></p>
+            </div>
+          </article>
+
+          <article class="card reveal" data-id="22" data-stagger style="--i:5">
+            <div class="card__media">
+              <span class="badge badge--pulse">-70%</span>
+              <img class="card__img" src="assets/img/photos/p-drop-pink.jpg" onerror="this.onerror=null;this.src='assets/img/p-drop-pink.svg'" alt="Moonlit Reflections Silver Look Pink Color Drop Earrings" loading="lazy" />
+              <a class="card__link" href="product.html?id=22" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions"><button class="card__add" type="button" data-add data-id="22">Add to cart</button><a class="card__quick" href="product.html?id=22">View details</a></div>
+            </div>
+            <div class="card__body">
+              <div class="stars" aria-label="4.1 out of 5 stars">★★★★☆ <span class="stars__count">(8 reviews)</span></div>
+              <h3 class="card__title"><a href="product.html?id=22">Moonlit Reflections Silver Look Pink Color Drop Earrings</a></h3>
+              <p class="card__price"><span class="price">₹184.00</span> <span class="price--old">₹613.00</span></p>
+            </div>
+          </article>
+
+          <article class="card reveal" data-id="23" data-stagger style="--i:6">
+            <div class="card__media">
+              <span class="badge badge--pulse">-70%</span>
+              <img class="card__img" src="assets/img/photos/p-zhumki-rani.jpg" onerror="this.onerror=null;this.src='assets/img/p-zhumki-rani.svg'" alt="Radiant Oxidized Silver look Rani Color Zhumki Chandelier Earrings" loading="lazy" />
+              <a class="card__link" href="product.html?id=23" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions"><button class="card__add" type="button" data-add data-id="23">Add to cart</button><a class="card__quick" href="product.html?id=23">View details</a></div>
+            </div>
+            <div class="card__body">
+              <div class="stars" aria-label="4.3 out of 5 stars">★★★★½ <span class="stars__count">(11 reviews)</span></div>
+              <h3 class="card__title"><a href="product.html?id=23">Radiant Oxidized Silver look Rani Color Zhumki Chandelier Earrings</a></h3>
+              <p class="card__price"><span class="price">₹212.00</span> <span class="price--old">₹706.00</span></p>
+            </div>
+          </article>
+
+          <article class="card reveal" data-id="24" data-stagger style="--i:7">
+            <div class="card__media">
+              <span class="badge badge--pulse">-35%</span>
+              <img class="card__img" src="assets/img/photos/p-pista.jpg" onerror="this.onerror=null;this.src='assets/img/p-pista.svg'" alt="Pistachios Pista without Shell Un-salted 1Kg" loading="lazy" />
+              <a class="card__link" href="product.html?id=24" tabindex="-1" aria-hidden="true"></a>
+                <div class="card__actions"><button class="card__add" type="button" data-add data-id="24">Add to cart</button><a class="card__quick" href="product.html?id=24">View details</a></div>
+            </div>
+            <div class="card__body">
+              <div class="stars" aria-label="4.7 out of 5 stars">★★★★½ <span class="stars__count">(33 reviews)</span></div>
+              <h3 class="card__title"><a href="product.html?id=24">Pistachios Pista without Shell Un-salted — 1Kg</a></h3>
+              <p class="card__price"><span class="price">₹2,145.00</span> <span class="price--old">₹3,300.00</span></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SURMEE LEATHER STORE BANNER ============ -->
+    <section class="section" id="surmee">
+      <div class="container">
+        <div class="promo reveal">
+          <div class="promo__left">
+            <img src="assets/img/giftbox.svg" alt="Gift box" loading="lazy" />
+          </div>
+          <div class="promo__right" data-parallax>
+            <img class="promo__bg" src="assets/img/surmee-banner.svg" alt="SURMEE Leather Store" loading="lazy" />
+            <div class="promo__content">
+              <a href="#top-products" class="btn btn--light promo__cta">Visit Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUST BADGES ============ -->
+    <section class="section trust" aria-label="Why shop with Merahaat">
+      <div class="container trust__grid">
+        <div class="trust__item reveal" data-stagger style="--i:0">
+          <div class="trust__icon">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12V8H6a2 2 0 010-4h12v4"/><path d="M4 6v12a2 2 0 002 2h14v-4"/><path d="M18 12a2 2 0 000 4h4v-4z"/></svg>
+          </div>
+          <h3 class="trust__title">Great Value</h3>
+          <p class="trust__text">We offer competitive prices on our <span class="countup" data-count="1000">0</span>+ products.</p>
+        </div>
+        <div class="trust__item reveal" data-stagger style="--i:1">
+          <div class="trust__icon">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h13v13H1z"/><path d="M14 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="1.8"/><circle cx="17.5" cy="18.5" r="1.8"/></svg>
+          </div>
+          <h3 class="trust__title">Worldwide Delivery</h3>
+          <p class="trust__text">We ship to over <span class="countup" data-count="200">0</span> countries &amp; regions.</p>
+        </div>
+        <div class="trust__item reveal" data-stagger style="--i:2">
+          <div class="trust__icon">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3 class="trust__title">Safe Payment</h3>
+          <p class="trust__text">Pay with the world's most popular and secure payment methods.</p>
+        </div>
+        <div class="trust__item reveal" data-stagger style="--i:3">
+          <div class="trust__icon">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <h3 class="trust__title">24/7 Help Center</h3>
+          <p class="trust__text">Round-the-clock assistance for a smooth shopping experience.</p>
+        </div>
+        <div class="trust__item reveal" data-stagger style="--i:4">
+          <div class="trust__icon">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+          </div>
+          <h3 class="trust__title">Mobile Shopping Apps</h3>
+          <p class="trust__text"><a href="#" class="link">Download the app</a> and get the world at your fingertips.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col footer__col--brand">
+        <h3 class="footer__head">Exclusive Deals and Offers!</h3>
+        <p class="footer__text">Register now to get updates on promotions and coupons.</p>
+        <form class="newsletter" onsubmit="return false;">
+          <label class="visually-hidden" for="newsletterEmail">Email address</label>
+          <input class="newsletter__input" id="newsletterEmail" type="email" placeholder="Enter your email" />
+          <button class="newsletter__btn btn btn--primary" type="submit">Subscribe</button>
+        </form>
+        <div class="socials" aria-label="Social media">
+          <a href="#" class="social" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M13 22v-8h3l1-4h-4V8c0-1.1.5-2 2-2h2V2.2C18.4 2.1 17 2 15.6 2 12.7 2 11 3.7 11 6.7V10H8v4h3v8z"/></svg></a>
+          <a href="#" class="social" aria-label="Twitter"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22 5.9c-.7.3-1.5.6-2.3.7.8-.5 1.4-1.3 1.7-2.2-.8.5-1.7.8-2.6 1a4.1 4.1 0 00-7 3.7A11.6 11.6 0 013.4 4.6a4.1 4.1 0 001.3 5.5c-.7 0-1.3-.2-1.8-.5a4.1 4.1 0 003.3 4c-.6.2-1.2.2-1.8.1a4.1 4.1 0 003.8 2.9A8.2 8.2 0 012 18.6a11.6 11.6 0 006.3 1.8c7.5 0 11.6-6.2 11.6-11.6v-.5c.8-.6 1.5-1.3 2.1-2.1z"/></svg></a>
+          <a href="#" class="social" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" class="social" aria-label="YouTube"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 00-1.7-1.7C19.3 5.2 12 5.2 12 5.2s-7.3 0-8.9.4A2.5 2.5 0 001.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 001.7 1.7c1.6.4 8.9.4 8.9.4s7.3 0 8.9-.4a2.5 2.5 0 001.7-1.7C23 15.2 23 12 23 12zM9.8 15.3V8.7l5.7 3.3z"/></svg></a>
+          <a href="#" class="social" aria-label="Pinterest"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2a10 10 0 00-3.6 19.3c-.1-.8-.2-2 0-2.9l1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.9 0 1.3.6 1.3 1.4 0 .9-.5 2.1-.8 3.3-.2.9.5 1.7 1.4 1.7 1.7 0 2.9-2.2 2.9-4.7 0-2-1.3-3.4-3.7-3.4a4.2 4.2 0 00-4.4 4.2c0 .8.3 1.4.6 1.8.1.2.1.3.1.4l-.2.9c0 .3-.2.4-.5.2-1.2-.5-1.8-2-1.8-3.5 0-2.6 2.2-5.7 6.5-5.7 3.5 0 5.8 2.5 5.8 5.2 0 3.5-2 6.2-4.9 6.2-1 0-1.9-.5-2.2-1.1l-.6 2.4c-.2.8-.7 1.7-1 2.3A10 10 0 1012 2z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__head footer__head--sm">Information</h4>
+        <ul class="footer__links">
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms and Conditions</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Help &amp; FAQs</a></li>
+          <li><a href="#">Our Blog</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__head footer__head--sm">Customer Service</h4>
+        <ul class="footer__links">
+          <li><a href="#">Track Orders</a></li>
+          <li><a href="#">Technical Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__head footer__head--sm">Promotion</h4>
+        <ul class="footer__links">
+          <li><a href="#">B2B</a></li>
+          <li><a href="#">Corporate Business</a></li>
+          <li><a href="#">Personalized Gift</a></li>
+          <li><a href="#">Sell on Merahaat</a></li>
+          <li><a href="#">Become a Franchise</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bar">
+      <div class="container footer__bar-inner">
+        <p class="footer__copy">Copyright © 2026 <span class="footer__brand">Merahaat</span>. All rights reserved.</p>
+        <div class="paylist" aria-label="Accepted payment methods">
+          <span class="pay">VISA</span>
+          <span class="pay">Net Banking</span>
+          <span class="pay">Razorpay</span>
+          <span class="pay">MasterCard</span>
+          <span class="pay">Paytm</span>
+          <span class="pay">PhonePe</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ FLOATING CONTROLS ============ -->
+  <a class="whatsapp" href="https://wa.me/" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor"><path d="M20 3.9A10 10 0 003.9 16L2 22l6.1-1.6A10 10 0 1020 3.9zM12 20a8 8 0 01-4.1-1.1l-.3-.2-3.6 1 1-3.5-.2-.3A8 8 0 1112 20zm4.4-6c-.2-.1-1.4-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 01-1.9-1.2 7.2 7.2 0 01-1.3-1.7c-.1-.2 0-.4.1-.5l.4-.4.3-.4c.1-.1.1-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3A2.9 2.9 0 006 9.6a5 5 0 001 2.7 11.4 11.4 0 004.4 3.9c.6.3 1.1.4 1.5.5a3.6 3.6 0 001.6.1c.5-.1 1.4-.6 1.6-1.1a2 2 0 00.1-1.1c0-.1-.2-.2-.4-.3z"/></svg>
+  </a>
+
+  <button class="backtotop" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <!-- Live region for cart announcements -->
+  <div class="visually-hidden" id="cartLive" role="status" aria-live="polite"></div>
+
+  <!-- ===== Optional enhancement layer: GSAP + ScrollTrigger =====
+       The page is fully functional without these. main.js detects whether
+       they loaded and upgrades the experience; otherwise the vanilla
+       IntersectionObserver/CSS baseline runs.
+       NOTE: native browser scrolling is used throughout (no scroll-hijacking
+       library) so trackpad / wheel / touch scrolling always feels natural.
+       ScrollTrigger only *reads* scroll position — it never intercepts input. -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Product data + shared shop layer, then the existing chrome -->
+  <script defer src="js/products.js"></script>
+  <script defer src="js/store.js"></script>
+  <script defer src="js/main.js"></script>
+</body>
+</html>

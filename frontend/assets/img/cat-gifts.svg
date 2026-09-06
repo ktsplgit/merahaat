@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600" role="img" aria-label="category image">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eab308"/><stop offset="1" stop-color="#a16207"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.4" r="0.75">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#g)"/>
+  <rect width="600" height="600" fill="url(#glow)"/>
+  <g opacity="0.10" stroke="#fff" stroke-width="2" fill="none">
+    <circle cx="491.99999999999994" cy="120.0" r="60"/><circle cx="96.0" cy="491.99999999999994" r="46"/>
+  </g>
+  <g fill="none" stroke="#fff3cc" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><rect x="185.0" y="242.5" width="229.99999999999997" height="149.5" rx="12"/><path d="M 300.0 242.5 V 392.0"/><path d="M 185.0 288.5 H 415.0"/><path d="M 300.0 242.5 q -69.0 -69.0 -23.0 -6.8999999999999995 q 23.0 0.0 23.0 6.8999999999999995 q 0.0 -6.8999999999999995 23.0 -6.8999999999999995 q 46.0 -62.099999999999994 -23.0 6.8999999999999995"/></g>
+</svg>

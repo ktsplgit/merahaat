@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" role="img" aria-label="Merahaat logo">
+  <!-- black badge -->
+  <circle cx="260" cy="262" r="252" fill="#141414"/>
+
+  <g transform="translate(6,0)">
+    <!-- bag handles: pink (left) + orange (right), each with end dots -->
+    <g fill="none" stroke-linecap="round">
+      <path d="M150 150 Q206 52 260 150" stroke="#e6197f" stroke-width="13"/>
+      <path d="M250 150 Q306 52 360 150" stroke="#f47a20" stroke-width="13"/>
+    </g>
+    <circle cx="150" cy="150" r="12" fill="#e6197f"/>
+    <circle cx="260" cy="150" r="12" fill="#e6197f"/>
+    <circle cx="250" cy="150" r="12" fill="#f47a20"/>
+    <circle cx="360" cy="150" r="12" fill="#f47a20"/>
+
+    <!-- MH monogram, bag-cut letters -->
+    <g fill="none" stroke="#ffffff" stroke-width="46" stroke-linejoin="round" stroke-linecap="butt">
+      <polyline points="120,318 120,152 190,278 260,152 260,318"/>
+      <path d="M298 152 V318 M298 240 H382 M382 152 V318"/>
+    </g>
+
+    <!-- pink underline -->
+    <rect x="120" y="338" width="270" height="13" rx="6" fill="#e6197f"/>
+
+    <!-- MERAHAAT wordlet -->
+    <text x="255" y="392" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="34" letter-spacing="2">
+      <tspan fill="#e6197f">MERA</tspan><tspan fill="#d59a2a">HAAT</tspan>
+    </text>
+  </g>
+
+  <!-- TM mark -->
+  <g stroke="#c9679c" fill="none"><circle cx="452" cy="74" r="17"/></g>
+  <text x="452" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#c9679c">TM</text>
+</svg>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Product details — photos, price, description, specifications and delivery information for this Merahaat product." />
+  <meta name="theme-color" content="#C2185B" />
+  <title>Product — Merahaat</title>
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="alternate icon" href="favicon.ico" sizes="48x48" />
+  <!-- Fonts (enhancement only — system fonts are the fallback in CSS) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/shop.css" />
+  <link rel="stylesheet" href="css/product.css" />
+</head>
+<body data-page="product">
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Skip link for keyboard users -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ TOP OFFER / COUPON BAR ============ -->
+  <div class="offerbar" role="region" aria-label="Current offers">
+    <div class="offerbar__track">
+      <span class="offerbar__item">🎉 Use Coupon Code <strong>MH0005</strong> &amp; get an additional <strong>5% OFF</strong> &nbsp;·&nbsp; <a href="#" class="offerbar__link">View All Coupons Code</a></span>
+      <span class="offerbar__item">🪔 Festive Dhanteras Sale is Live &nbsp;·&nbsp; Up to <strong>70% OFF</strong> on Jewellery &amp; Namkeen</span>
+      <span class="offerbar__item">🚚 Free Worldwide Delivery on orders above <strong>₹1499</strong></span>
+      <!-- duplicated for seamless marquee loop -->
+      <span class="offerbar__item" aria-hidden="true">🎉 Use Coupon Code <strong>MH0005</strong> &amp; get an additional <strong>5% OFF</strong> &nbsp;·&nbsp; <a href="#" class="offerbar__link">View All Coupons Code</a></span>
+      <span class="offerbar__item" aria-hidden="true">🪔 Festive Dhanteras Sale is Live &nbsp;·&nbsp; Up to <strong>70% OFF</strong> on Jewellery &amp; Namkeen</span>
+      <span class="offerbar__item" aria-hidden="true">🚚 Free Worldwide Delivery on orders above <strong>₹1499</strong></span>
+    </div>
+  </div>
+
+  <!-- ============ HEADER (identical chrome to index.html) ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Merahaat home">
+        <img class="brand__logo" src="assets/img/logo.svg" width="52" height="52" alt="" />
+        <span class="brand__word"><span class="brand__mera">MERA</span><span class="brand__haat">HAAT</span></span>
+      </a>
+
+      <form class="search" role="search">
+        <label class="visually-hidden" for="searchInput">Search products and categories</label>
+        <input class="search__input" id="searchInput" type="search" placeholder="Search Product &amp; Category" autocomplete="off" />
+        <button class="search__btn" type="submit" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        </button>
+      </form>
+
+      <div class="header__actions">
+        <a class="iconbtn" href="account.html" aria-label="My account — login or register">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+        </a>
+        <a class="iconbtn cart" id="cartBtn" href="cart.html" aria-label="Shopping cart, 0 items">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6L5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg>
+          <span class="cart__badge" id="cartBadge">0</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ============ CATEGORY NAV ============ -->
+    <nav class="catnav" aria-label="Product categories">
+      <ul class="catnav__list container">
+        <li class="catnav__item has-menu">
+          <a href="products.html?category=jewellery">Women <svg class="caret" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+          <ul class="submenu">
+            <li><a href="products.html?category=jewellery">Fashion Jewellery</a></li><li><a href="products.html?q=necklace">Oxidized Necklaces</a></li>
+            <li><a href="products.html?q=earrings">Earrings &amp; Zhumki</a></li><li><a href="products.html?category=winter-wear">Woolen Ponchos</a></li>
+          </ul>
+        </li>
+        <li class="catnav__item has-menu">
+          <a href="products.html?category=dry-fruits">Dry Fruits &amp; Seeds <svg class="caret" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+          <ul class="submenu">
+            <li><a href="products.html?q=almond">Almonds &amp; Cashews</a></li><li><a href="products.html?q=pista">Pistachios</a></li>
+            <li><a href="products.html?q=combo">Combo Packs</a></li><li><a href="products.html?q=seeds">Seeds</a></li>
+          </ul>
+        </li>
+        <li class="catnav__item has-menu">
+          <a href="products.html?category=kids">Baby &amp; Kids <svg class="caret" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+          <ul class="submenu">
+            <li><a href="products.html?q=baby">Baby Care</a></li><li><a href="products.html?category=kids">Kids Wear</a></li><li><a href="products.html?category=kids">Toys</a></li>
+          </ul>
+        </li>
+        <li class="catnav__item has-menu">
+          <a href="products.html">Home <svg class="caret" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+          <ul class="submenu">
+            <li><a href="products.html">Furnishing</a></li><li><a href="products.html">Cushions</a></li><li><a href="products.html">Decor</a></li>
+          </ul>
+        </li>
+        <li class="catnav__item"><a href="products.html?q=combo">Combo Pack</a></li>
+        <li class="catnav__item"><a href="products.html?category=corporate-gifts">Gift</a></li>
+        <li class="catnav__item has-menu">
+          <a href="products.html?category=puja">Puja <svg class="caret" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+          <ul class="submenu">
+            <li><a href="products.html?category=puja">Diyas &amp; Lamps</a></li><li><a href="products.html?q=incense">Incense</a></li><li><a href="products.html?q=thali">Puja Thali</a></li>
+          </ul>
+        </li>
+        <li class="catnav__item has-menu">
+          <a href="products.html?category=leather">Leather <svg class="caret" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+          <ul class="submenu">
+            <li><a href="products.html?q=wallet">Wallets</a></li><li><a href="products.html?q=bag">Satchels &amp; Bags</a></li><li><a href="products.html?category=leather">Belts</a></li>
+          </ul>
+        </li>
+        <li class="catnav__item"><a href="products.html?category=namkeen-snacks">Namkeen &amp; Snacks</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ============ MOBILE DRAWER ============ -->
+  <div class="drawer-overlay" id="drawerOverlay" hidden></div>
+  <aside class="drawer" id="mobileDrawer" aria-label="Mobile menu" aria-hidden="true">
+    <div class="drawer__head">
+      <span class="brand__word"><span class="brand__mera">MERA</span><span class="brand__haat">HAAT</span></span>
+      <button class="drawer__close" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <nav aria-label="Mobile categories">
+      <ul class="drawer__list">
+        <li><a href="products.html?category=jewellery">Women</a></li>
+        <li><a href="products.html?category=dry-fruits">Dry Fruits &amp; Seeds</a></li>
+        <li><a href="products.html?category=kids">Baby &amp; Kids</a></li>
+        <li><a href="products.html">Home</a></li>
+        <li><a href="products.html?q=combo">Combo Pack</a></li>
+        <li><a href="products.html?category=corporate-gifts">Gift</a></li>
+        <li><a href="products.html?category=puja">Puja</a></li>
+        <li><a href="products.html?category=leather">Leather</a></li>
+        <li><a href="products.html?category=namkeen-snacks">Namkeen &amp; Snacks</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main id="main" class="shop">
+    <div class="container">
+
+      <!-- ============ BREADCRUMB (category + name filled by js/product.js) ============ -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb__sep" aria-hidden="true">/</span>
+        <a href="products.html">Products</a>
+        <span class="breadcrumb__sep" id="crumbCatSep" aria-hidden="true" hidden>/</span>
+        <a href="products.html" id="crumbCat" hidden></a>
+        <span class="breadcrumb__sep" aria-hidden="true">/</span>
+        <span id="crumbCurrent" aria-current="page">Product</span>
+      </nav>
+
+      <!-- ============ PRODUCT ============ -->
+      <!-- Every value below is filled in from js/products.js by js/product.js.
+           The markup is the template; the data lives in one place only. -->
+      <article class="pdp" id="pdp" hidden>
+
+        <!-- ---------- Gallery ---------- -->
+        <div class="gallery">
+          <div class="gallery__main" id="galleryMain">
+            <div class="gallery__badges" id="galleryBadges"></div>
+            <img class="gallery__img" id="galleryImg" src="" alt="" width="720" height="720" />
+            <span class="gallery__hint" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg>
+              Hover to zoom
+            </span>
+          </div>
+          <!-- Thumbnails are only rendered when the product has more than one
+               photo, so a single-image product shows no empty strip. -->
+          <div class="thumbs" id="thumbs" role="group" aria-label="Product photos"></div>
+        </div>
+
+        <!-- ---------- Info ---------- -->
+        <div class="pdp__info">
+          <a class="pdp__cat" id="pdpCat" href="products.html"></a>
+          <h1 class="pdp__title" id="pdpTitle"></h1>
+
+          <div class="pdp__ratingrow">
+            <span class="pdp__rating" id="pdpRating"></span>
+            <span class="stock" id="pdpStock"></span>
+          </div>
+
+          <div class="pdp__pricebox">
+            <span class="price" id="pdpPrice"></span>
+            <s class="price--old" id="pdpOldPrice" hidden></s>
+            <span class="badge badge--pulse" id="pdpDiscount" hidden></span>
+            <span class="saving" id="pdpSaving" hidden></span>
+          </div>
+
+          <p class="pdp__desc" id="pdpDesc"></p>
+
+          <div class="pdp__buy">
+            <div class="pdp__qtyrow">
+              <span class="pdp__qtylabel" id="qtyLabel">Quantity</span>
+              <div class="qty">
+                <button class="qty__btn" type="button" data-step="-1" aria-label="Decrease quantity">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14"/></svg>
+                </button>
+                <input class="qty__input" id="qtyInput" type="number" value="1" min="1" max="99" step="1"
+                       inputmode="numeric" aria-labelledby="qtyLabel" />
+                <button class="qty__btn" type="button" data-step="1" aria-label="Increase quantity">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="pdp__actions">
+              <button class="btn btn--primary" id="pdpAdd" type="button"
+                      data-add data-qty-from="#qtyInput" data-fly-from="#galleryImg">Add to cart</button>
+              <button class="btn btn--ghost" id="pdpBuy" type="button"
+                      data-buy-now data-qty-from="#qtyInput">Buy now</button>
+            </div>
+
+            <button class="wishbtn" id="pdpWish" type="button" aria-pressed="false">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.7l-1.4-1.3C6 15.4 3 12.7 3 9.3A4.3 4.3 0 017.3 5c1.5 0 2.9.7 3.8 1.8L12 7.9l.9-1.1A5 5 0 0116.7 5 4.3 4.3 0 0121 9.3c0 3.4-3 6.1-7.6 10.1z"/></svg>
+              <span id="pdpWishLabel">Add to wishlist</span>
+            </button>
+          </div>
+
+          <!-- ---------- Specifications ---------- -->
+          <section class="panel" id="specsPanel" aria-labelledby="specsTitle">
+            <h2 class="panel__title" id="specsTitle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+              Product details
+            </h2>
+            <table class="specs">
+              <tbody id="specsBody"></tbody>
+            </table>
+          </section>
+
+          <!-- ---------- Delivery (informational placeholder) ---------- -->
+          <section class="panel" aria-labelledby="deliveryTitle">
+            <h2 class="panel__title" id="deliveryTitle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg>
+              Delivery &amp; returns
+            </h2>
+            <div class="delivery">
+              <p class="delivery__row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg>
+                <span><strong>Standard delivery in 4–7 days</strong>Dispatched from our Kolkata warehouse.</span>
+              </p>
+              <p class="delivery__row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4-3.4 7.4-8 9-4.6-1.6-8-5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+                <span><strong>Free shipping above ₹1,499</strong>Flat ₹79 on smaller orders.</span>
+              </p>
+              <p class="delivery__row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 019-9 9 9 0 019 9 9 9 0 01-9 9 9 9 0 01-9-9z"/><path d="M12 8v4l3 2"/></svg>
+                <span><strong>7-day easy returns</strong>Unused items in original packaging.</span>
+              </p>
+              <p class="delivery__note">
+                Delivery estimates and shipping charges shown here are sample text for this
+                front-end demo — no live courier or pin-code service is connected.
+              </p>
+            </div>
+          </section>
+        </div>
+      </article>
+
+      <!-- ============ NOT FOUND (bad or missing ?id=) ============ -->
+      <div class="pdp-missing" id="pdpMissing" hidden>
+        <div class="empty">
+          <div class="empty__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5h.01"/></svg>
+          </div>
+          <h1 class="empty__title">Product not found</h1>
+          <p class="empty__text">
+            We couldn’t find the product you were looking for. It may have been removed,
+            or the link may be incomplete.
+          </p>
+          <div class="empty__actions">
+            <a class="btn btn--primary" href="products.html">Browse all products</a>
+            <a class="btn btn--ghost" href="index.html">Back to home</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ RELATED PRODUCTS ============ -->
+      <section class="related" id="relatedWrap" aria-labelledby="relatedTitle" hidden>
+        <div class="related__head">
+          <h2 class="section__title" id="relatedTitle">You may also like</h2>
+        </div>
+        <!-- Same card component as the homepage and the listing page -->
+        <div class="prodgrid prodgrid--4" id="relatedGrid"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col footer__col--brand">
+        <h3 class="footer__head">Exclusive Deals and Offers!</h3>
+        <p class="footer__text">Register now to get updates on promotions and coupons.</p>
+        <form class="newsletter" onsubmit="return false;">
+          <label class="visually-hidden" for="newsletterEmail">Email address</label>
+          <input class="newsletter__input" id="newsletterEmail" type="email" placeholder="Enter your email" />
+          <button class="newsletter__btn btn btn--primary" type="submit">Subscribe</button>
+        </form>
+        <div class="socials" aria-label="Social media">
+          <a href="#" class="social" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M13 22v-8h3l1-4h-4V8c0-1.1.5-2 2-2h2V2.2C18.4 2.1 17 2 15.6 2 12.7 2 11 3.7 11 6.7V10H8v4h3v8z"/></svg></a>
+          <a href="#" class="social" aria-label="Twitter"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22 5.9c-.7.3-1.5.6-2.3.7.8-.5 1.4-1.3 1.7-2.2-.8.5-1.7.8-2.6 1a4.1 4.1 0 00-7 3.7A11.6 11.6 0 013.4 4.6a4.1 4.1 0 001.3 5.5c-.7 0-1.3-.2-1.8-.5a4.1 4.1 0 003.3 4c-.6.2-1.2.2-1.8.1a4.1 4.1 0 003.8 2.9A8.2 8.2 0 012 18.6a11.6 11.6 0 006.3 1.8c7.5 0 11.6-6.2 11.6-11.6v-.5c.8-.6 1.5-1.3 2.1-2.1z"/></svg></a>
+          <a href="#" class="social" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" class="social" aria-label="YouTube"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 00-1.7-1.7C19.3 5.2 12 5.2 12 5.2s-7.3 0-8.9.4A2.5 2.5 0 001.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 001.7 1.7c1.6.4 8.9.4 8.9.4s7.3 0 8.9-.4a2.5 2.5 0 001.7-1.7C23 15.2 23 12 23 12zM9.8 15.3V8.7l5.7 3.3z"/></svg></a>
+          <a href="#" class="social" aria-label="Pinterest"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2a10 10 0 00-3.6 19.3c-.1-.8-.2-2 0-2.9l1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.9 0 1.3.6 1.3 1.4 0 .9-.5 2.1-.8 3.3-.2.9.5 1.7 1.4 1.7 1.7 0 2.9-2.2 2.9-4.7 0-2-1.3-3.4-3.7-3.4a4.2 4.2 0 00-4.4 4.2c0 .8.3 1.4.6 1.8.1.2.1.3.1.4l-.2.9c0 .3-.2.4-.5.2-1.2-.5-1.8-2-1.8-3.5 0-2.6 2.2-5.7 6.5-5.7 3.5 0 5.8 2.5 5.8 5.2 0 3.5-2 6.2-4.9 6.2-1 0-1.9-.5-2.2-1.1l-.6 2.4c-.2.8-.7 1.7-1 2.3A10 10 0 1012 2z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__head footer__head--sm">Information</h4>
+        <ul class="footer__links">
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms and Conditions</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Help &amp; FAQs</a></li>
+          <li><a href="#">Our Blog</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__head footer__head--sm">Customer Service</h4>
+        <ul class="footer__links">
+          <li><a href="#">Track Orders</a></li>
+          <li><a href="#">Technical Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__head footer__head--sm">Promotion</h4>
+        <ul class="footer__links">
+          <li><a href="#">B2B</a></li>
+          <li><a href="#">Corporate Business</a></li>
+          <li><a href="#">Personalized Gift</a></li>
+          <li><a href="#">Sell on Merahaat</a></li>
+          <li><a href="#">Become a Franchise</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bar">
+      <div class="container footer__bar-inner">
+        <p class="footer__copy">Copyright © 2026 <span class="footer__brand">Merahaat</span>. All rights reserved.</p>
+        <div class="paylist" aria-label="Accepted payment methods">
+          <span class="pay">VISA</span>
+          <span class="pay">Net Banking</span>
+          <span class="pay">Razorpay</span>
+          <span class="pay">MasterCard</span>
+          <span class="pay">Paytm</span>
+          <span class="pay">PhonePe</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ FLOATING CONTROLS ============ -->
+  <a class="whatsapp" href="https://wa.me/" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor"><path d="M20 3.9A10 10 0 003.9 16L2 22l6.1-1.6A10 10 0 1020 3.9zM12 20a8 8 0 01-4.1-1.1l-.3-.2-3.6 1 1-3.5-.2-.3A8 8 0 1112 20zm4.4-6c-.2-.1-1.4-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 01-1.9-1.2 7.2 7.2 0 01-1.3-1.7c-.1-.2 0-.4.1-.5l.4-.4.3-.4c.1-.1.1-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3A2.9 2.9 0 006 9.6a5 5 0 001 2.7 11.4 11.4 0 004.4 3.9c.6.3 1.1.4 1.5.5a3.6 3.6 0 001.6.1c.5-.1 1.4-.6 1.6-1.1a2 2 0 00.1-1.1c0-.1-.2-.2-.4-.3z"/></svg>
+  </a>
+
+  <button class="backtotop" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <!-- Live region for cart / wishlist announcements -->
+  <div class="visually-hidden" id="cartLive" role="status" aria-live="polite"></div>
+
+  <!-- Optional enhancement layer: GSAP + ScrollTrigger (see README) -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Data first, then the shared store, then the shared chrome, then this page -->
+  <script defer src="js/products.js"></script>
+  <script defer src="js/store.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/product.js"></script>
+</body>
+</html>

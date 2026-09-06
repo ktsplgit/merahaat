@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="640" viewBox="0 0 1600 640" role="img" aria-label="decorative">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f766e"/><stop offset="1" stop-color="#be185d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.4" r="0.8">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="640" fill="url(#g)"/>
+  <rect width="1600" height="640" fill="url(#glow)"/>
+  <g opacity="0.10" stroke="#fff" stroke-width="2" fill="none">
+    <circle cx="1344.0" cy="128.0" r="76.8"/>
+    <circle cx="224.00000000000003" cy="512.0" r="57.599999999999994"/>
+  </g>
+  <g fill="none" stroke="#f4d9e6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M 646.4 243.2 Q 800.0 435.2 953.6 243.2"/><circle cx="646.4" cy="243.2 " r="7"/><circle cx="684.8" cy="316.67521901409725 " r="7"/><circle cx="723.1999999999999" cy="378.96450198781713 " r="7"/><circle cx="761.5999999999999" cy="420.5848702421671 " r="7"/><circle cx="800.0" cy="435.2 " r="7"/><circle cx="838.4" cy="420.5848702421671 " r="7"/><circle cx="876.8" cy="378.96450198781713 " r="7"/><circle cx="915.2" cy="316.67521901409725 " r="7"/><circle cx="953.5999999999999" cy="243.20000000000002 " r="7"/><circle cx="800.0" cy="442.88" r="16"/></g>
+</svg>

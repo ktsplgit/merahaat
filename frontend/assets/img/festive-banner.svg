@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="720" viewBox="0 0 720 720" role="img" aria-label="Sab Se Special festive offer - Download Catalogue">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff7e6"/><stop offset="1" stop-color="#ffe3c2"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e11d48"/><stop offset="1" stop-color="#b91c1c"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="720" fill="url(#bg)"/>
+  <g opacity="0.35" fill="none" stroke="#eab308" stroke-width="3">
+    <circle cx="360" cy="360" r="300"/><circle cx="360" cy="360" r="250"/>
+  </g>
+  <!-- marigold garland -->
+  <g fill="#f59e0b">
+    <circle cx="120" cy="104" r="12"/><circle cx="160" cy="90" r="12"/><circle cx="200" cy="104" r="12"/><circle cx="240" cy="90" r="12"/><circle cx="280" cy="104" r="12"/><circle cx="320" cy="90" r="12"/><circle cx="360" cy="104" r="12"/><circle cx="400" cy="90" r="12"/><circle cx="440" cy="104" r="12"/><circle cx="480" cy="90" r="12"/><circle cx="520" cy="104" r="12"/><circle cx="560" cy="90" r="12"/><circle cx="600" cy="104" r="12"/>
+  </g>
+  <text x="360" y="260" text-anchor="middle" font-family="Georgia, serif" font-weight="800" font-size="120" fill="url(#red)">Sab</text>
+  <text x="360" y="370" text-anchor="middle" font-family="Georgia, serif" font-weight="800" font-size="100" fill="url(#red)">Se</text>
+  <text x="360" y="490" text-anchor="middle" font-family="Georgia, serif" font-weight="800" font-size="120" fill="url(#red)">Special</text>
+  <text x="360" y="545" text-anchor="middle" font-family="'Brush Script MT', cursive" font-size="30" fill="#be185d">Happy Dhanteras &amp; Bhai Dooj</text>
+  <!-- diyas -->
+  <g>
+    <ellipse cx="250" cy="600" rx="46" ry="18" fill="#f97316"/>
+    <path d="M250 585 q8 -34 -2 -54 q-18 26 2 54" fill="#fbbf24"/>
+    <ellipse cx="470" cy="600" rx="46" ry="18" fill="#f97316"/>
+    <path d="M470 585 q8 -34 -2 -54 q-18 26 2 54" fill="#fbbf24"/>
+  </g>
+  <rect x="235" y="640" width="250" height="48" rx="24" fill="#8a1c1c"/>
+  <text x="360" y="672" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="20" fill="#ffd9a0" letter-spacing="1">DOWNLOAD CATALOGUE</text>
+</svg>
